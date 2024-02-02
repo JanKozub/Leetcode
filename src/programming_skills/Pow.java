@@ -26,7 +26,6 @@ public class Pow {
         for (int i = 0; i < n; i++) {
             r *= x;
 
-            System.out.println(r);
             if (r == 0.0){
                 return 0;
             }
