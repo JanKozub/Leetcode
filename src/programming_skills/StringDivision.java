@@ -22,15 +22,7 @@ public class StringDivision {
     }
 
     public static boolean canBeDivided(char[] string, char[] pattern) {
-        if (string.length % pattern.length != 0) return false;
 
-        int pc = 0;
-        for (int i = 0; i < string.length / pattern; i++) {
-            if (i != pattern[pc]) return false;
-
-            pc++;
-            if (pc > pattern.length - 1) pc = 0;
-        }
 
         return true;
     }
