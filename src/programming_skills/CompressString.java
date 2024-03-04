@@ -3,8 +3,6 @@ package programming_skills;
 public class CompressString {
 
     public static void main(String[] args) {
-//        System.out.println(compress(new char[]{'a','b','b','b','b','b','b','b','b','b','b','b','b'}));
-//        System.out.println(compress(new char[]{'a','a','b','b','c','c','c'}));
         System.out.println(compress(new char[]{'a', 'b', 'c'}));
     }
 
