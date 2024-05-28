@@ -36,27 +36,15 @@ public class RepeatingStringPattern {
     }
 
     public static boolean repeatedSubstringPattern(String s) {
-        String pattern, ts;
-        int patternLength;
+        String pattern, newString;
 
-        for (int index = 1; index < s.length(); index++) {
-            pattern = s.substring(0, index);
-            patternLength = index;
+        for (int currentLen = 1; currentLen <= s.length() / 2; currentLen++) {
+            if (s.length() % currentLen != 0) continue;
 
-            if (index + patternLength > s.length())
-                continue;
+            pattern = s.substring(0, currentLen);
+            newString = pattern.repeat(s.length() / currentLen);
 
-            if (s.length() % patternLength != 0)
-                continue;
-
-            ts = s.substring(index, index + patternLength);
-            while (index + patternLength <= s.length() && pattern.equals(ts)) {
-                if (index + patternLength == s.length())
-                    return true;
-
-                index = index + patternLength;
-                ts = s.substring(index, index + patternLength);
-            }
+            if (s.equals(newString)) return true;
         }
 
         return false;
